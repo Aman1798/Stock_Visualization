@@ -1,0 +1,255 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 0.75s
+}
+
+header ul {
+    display: inline-block;
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px
+}
+
+header li {
+    display: inline-block
+}
+
+header a {
+    display: block;
+    color: #00365b;
+    padding: 10px
+}
+
+header a:hover {
+    color: #274d68;
+    text-decoration: none;
+    background: #eee;
+    border-radius: 4px
+}
+
+header a:focus {
+    color: #2776ab;
+    text-decoration: none
+}
+
+.background-alt {
+    background: #f2f2f5
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.project {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.project-info {
+    text-align: center; /* Center-align the headings and paragraphs */
+    
+}
+
+.project-info h2 {
+    text-align: center; /* Center-align the headings */
+    margin-top: 60px; /* Add some top margin to create space */
+    
+}
+
+.project-info p {
+    text-align: left; /* Align paragraphs to the left for better readability */
+    max-width: 800px; /* Optionally set a max-width for better readability */
+    margin: 0 auto; /* Center the paragraphs */
+    padding-top: 60px; /* Add some top padding */
+}
+
+.project-image {
+    margin-top: 40px; /* Add margin to create space between heading and image */
+}
+
+.project .project-image {
+    flex: 1;
+    max-width: 300px; /* Adjust the width as needed */
+    margin-right: 20px;
+    padding-top: 60px; /* Add some top padding */
+}
+
+.project .project-image img {
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 300px; /* Set maximum width for consistency */
+    max-height: 200px; /* Set maximum height for consistency */
+}
+
+
+.project .project-info {
+    flex: 1;
+    
+}
+
+.project-info h3 {
+    margin-top: 0;
+    padding-top: 60px; /* Add some top padding */
+}
+
+.project-info p {
+    margin-bottom: 10px;
+}
+
+#lead-content {
+    text-align: center;
+    padding-top: 60px; /* Add some top padding */
+}
+
+#lead-content i {
+    display: inline-block;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* CSS styling for D3.js visualization */
+
+/* Style for chart container on the left */
+#chart-container-left {
+    flex: 1;
+    margin-right: 20px; /* Add margin to create space between chart containers */
+}
+
+/* Style for chart container */
+/* Adjust margin and flex for proper spacing */
+#container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Increase bottom margin for spacing */
+}
+
+/* Style for chart container on the right */
+#chart-container {
+    flex: 1;
+    margin-left: 20px; /* Add margin to create space between chart containers */
+}
+
+/* Style for SVG */
+svg {
+display: block;
+margin: auto;
+}
+
+/* Style for axis */
+.axis path,
+.axis line {
+fill: none;
+stroke: black;
+shape-rendering: crispEdges;
+}
+
+.axis text {
+font-family: sans-serif;
+font-size: 11px;
+}
+
+ /* Style for lines */
+.line {
+fill: none;
+stroke-width: 2px;
+}
+
+/* Style for axis labels */
+.axis-label {
+font-size: 14px;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0; /* Initially set to 0 to hide the tooltip */
+    transition: opacity 0.3s; /* Add transition for smooth visibility */
+    z-index: 999; /* Ensure tooltip is above other elements */
+    /* Adjust positioning */
+    top: 50px; /* Move the tooltip 50px above the mouse pointer */
+    left: calc(100% + 10px); /* Move the tooltip 10px to the right of the mouse pointer */
+}
+
+
+.tooltip.active {
+    opacity: 1; /* Set to 1 when active to make the tooltip visible */
+}
+
+
+/* Style for filter container */
+#filter-container,
+#filter-container2 {
+    display: flex;
+    justify-content: center; /* Center-align the content horizontally */
+    align-items: center;
+    margin-bottom: 10px; /* Add some bottom margin for spacing */
+    
+}
+
+/* Style for select box */
+#stock-select,
+#stock-select2 {
+    font-size: 14px;
+    width: 200px;
+    border-radius: 5px;
+    margin-right: 10px; /* Add right margin for spacing */
+}
+
+/* Style for zoom buttons */
+.zoom-button {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff; /* Change the background color as needed */
+    color: #fff;
+}
+
+.zoom-button:hover {
+    background-color: #0056b3; 
+}
+
+/* Style for reset buttons */
+#reset-button-left,
+#reset-button-right {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: hsl(131, 70%, 44%); /* Change the background color as needed */
+    color: #fff;
+}
+
+#reset-button-left:hover,
+#reset-button-right:hover {
+    background-color: hsl(131, 70%, 44%); 
+}
+
